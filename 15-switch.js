@@ -1,4 +1,4 @@
-const month = 3;
+const month = 13;
 
 switch (month){
     case 1:
@@ -37,5 +37,8 @@ switch (month){
     case 12:
         console.log("december");
         break;
+    default:
+        console.log("no match condiction");
+        
                
 }
