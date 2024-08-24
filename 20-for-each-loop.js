@@ -166,10 +166,12 @@ let total = 0;
 
 for (let index = 0; index < Arry1.length; index++) {
     const element = Arry1[index]
-    console.log(element);
-    total += Arry1[index];    
+    // console.log(element);
+    // total += Arry1[index];    
+    total += element   
 }
-console.log("total value", total);
+
+console.log("total value hai", total);
 
 
 const shoppingCard = [
@@ -193,7 +195,19 @@ const shoppingCard = [
 
 const totalcardPrice = shoppingCard.reduce( (acc, item) => acc + item.price, 0)
 
-console.log("Total price = ", totalcardPrice);
+// console.log("Total price = ", totalcardPrice);
+
+//   add total card price to used for loop
+
+let totalRs = 0;
+
+for (let index = 0; index < shoppingCard.length; index++) {
+    let = element = shoppingCard[index];
+    totalRs += element.price
+    // console.log(element.itemName);    
+}
+// console.log("total price = ", totalRs);
+
 
 
 //******************       THE END FIRST PART            **********
