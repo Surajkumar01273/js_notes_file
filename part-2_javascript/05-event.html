@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Event</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+        }
+        li a{
+            text-decoration: none;
+            color: #212121;
+        }
+    </style>
+</head>
+<body backgroundColor="#414141">
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="image">
+            <li class="l"><img id="cloth" width="200px" src="assist/box1_image.jpg" alt=""></li>
+            <li><img id="wash" width="200px" src="assist/box2_image.jpg" alt="" onclick="alert('good work')"></li>
+            <li><img id="chair" width="200px" src="assist/box3_image.jpg" alt=""></li>
+            <li><img id="phone" width="200px" src="assist/box4_image.jpg" alt=""></li>
+            <li><img id="makeup" width="200px" src="assist/box5_image.jpg" alt=""></li>
+            <li><img id="dog" width="200px" src="assist/box6_image.jpg" alt=""></li>
+            <li><img id="toys" width="200px" src="assist/box7_image.jpg" alt=""></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    document.querySelector('#cloth').onclick = function (){
+        alert('no no you are good')
+    };
+
+    // Some Event object name
+    // attachEvent
+
+    //jQuery-on
+
+      //type, timeStamp, defaulPrevent, srcElement, currentTarget, 
+    // clintX, clintY, screenX, ScreenY, altkey, ctrlkey, keycode
+
+    // event propegation have two contest 1. event Bubling and 2. event capturing
+    // defalut propegation bubling its call false value and true is called capturing
+    
+    document.getElementById('cloth').addEventListener('click', function(e){
+        console.log('click in side the ul');   
+    },false)
+
+    document.getElementById('chair').addEventListener('click', function(e){
+        console.log('chair click');   
+        e.stopPropagation()  // this is stop the bubling of element
+    }, false)
+    document.querySelector('#google').addEventListener('click', function(e){
+        console.log("google click");
+        e.preventDefault()  //this method is hold the action
+        e.stopPropagation()  // this is stop the bubling of element
+    }, false)
+
+    document.querySelector('#image').addEventListener("click", function(e){
+        console.log(e.target);
+        const removeIt = e.target.parentNode;
+        // removeIt.remove()
+        removeIt.parentNode.removeChild(removeIt)
+
+    }, false)
+    
+    document.querySelector('#image').addEventListener("click", function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName==="IMG"){
+            console.log(e.target.id);
+            const removeIt = e.target.parentNode;
+            removeIt.remove()
+        }
+
+    }, false)
+ 
+</script>
+</html>

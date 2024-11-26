@@ -7,7 +7,7 @@ const mysubject = {
     ruby: "rubby"
 }
 
-// console.log(mysubject);
+console.log(mysubject);
 
 
 for (const key in mysubject) {
