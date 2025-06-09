@@ -18,28 +18,28 @@ let name = "hitesh"  // string
 let age = 22         // number
 let isLogin = true;  // boolean
 let accountCity      // undefined
-const temprter = null; // object
+const temprater = null; // object
 const bigNumber = 5454246877n;  // bigint
 const id = Symbol(2222);  // Symbol
-const anotherId = Symbol(2223);  // symbol
+const anotherId = Symbol(2222);  // symbol
 
 
-console.log(typeof name);
-console.log(typeof age);
-console.log(typeof isLogin)
-console.log(typeof accountCity);
-console.log(temprter);
-console.log(typeof temprter);
-console.log(bigNumber);
-console.log(typeof bigNumber);
-console.log(typeof id);
-console.log(anotherId===id); // false value because symbol always give the uique value
+// console.log(typeof name);
+// console.log(typeof age);
+// console.log(typeof isLogin)
+// console.log(typeof accountCity);
+// console.log(temprater);
+// console.log(typeof temprater);
+// console.log(bigNumber);
+// console.log(typeof bigNumber);
+// console.log(typeof id);
+console.log(anotherId==id); // false value because symbol always give the uique value
 
 //  Array  ****************
 
 const myArray = [1, 3, 56, 34];  // object
-console.log(myArray); 
-console.log(typeof myArray);
+// console.log(myArray); 
+// console.log(typeof myArray);
 
 
 //    Object  *************
@@ -50,8 +50,8 @@ accountId: "121221",
 accountPassword: "11111"
      
 }
-console.log(myobject);
-console.log(typeof myobject);
+// console.log(myobject);
+// console.log(typeof myobject);
 
  // function   ***************
 
@@ -63,9 +63,9 @@ console.log(typeof myobject);
     return sum
  }
 
- console.log(myfunction);
+//  console.log(myfunction);
 
-console.log(typeof myfunction);
+// console.log(typeof myfunction);
 
 
 // ********************    memorymanagement in javascript     *******************
@@ -76,9 +76,9 @@ let myyoutubName = "lifeSpend"
 let anotherName = myyoutubName;
 anotherName = "chaiaurcode";
 
-console.log(myyoutubName);
+// console.log(myyoutubName);
 
-console.log(anotherName);
+// console.log(anotherName);
 
 let user = {
    email: "surajshk8470@gmail.com",
@@ -89,7 +89,7 @@ let usertwo = user;
 usertwo.email = "surajbca@2902mail.com"
 usertwo.password = "111111"
 
-console.log(usertwo.email);
-console.log(user);
-console.log(usertwo);
+// console.log(usertwo.email);
+// console.log(user);
+// console.log(usertwo);
 
